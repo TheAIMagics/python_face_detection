@@ -1,4 +1,4 @@
 Flask==2.2.2
-opencv-python
+opencv-contrib-python
 numpy==1.23.2
 gunicorn
