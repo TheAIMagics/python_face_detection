@@ -1,6 +1,11 @@
-FROM python:3.8
-COPY . /app
+FROM continuumio/miniconda3
+
+RUN apt-get update && apt-get install libgl1 -y && conda install -c conda-forge dlib -y
+
 WORKDIR /app
+
+COPY . /app
+
 RUN pip install -r requirements.txt
-EXPOSE $PORT
-CMD gunicorn --workers=1 --bind 0.0.0.0:$PORT app:app
+
+CMD ["python", "app.py"]
