@@ -1,6 +1,8 @@
 
 <h1 align="center">Python Face Detection App </h1>
 
+Application url : [URL_Shortner](https://ineuronurl.herokuapp.com/)
+
 <h5> This Application will detect object of interest (human face) in real time. Application will detect face either from user uploaded image or frames from web camera. </h5>
 
 ## <img src="https://c.tenor.com/NCRHhqkXrJYAAAAi/programmers-go-internet.gif" width="25">  <b>Approach</b>
@@ -10,24 +12,26 @@
 
 ## <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="25"> <b> API</b>
 
+1. Project Flowchart
 
-1. Landing page of application
+![Screenshot](snippets/face_authenticator.png)
+2. Landing page of application
 
 ![Screenshot](snippets/snippet1.png)
 
-2. option to upload image
+3. option to upload image
 
 ![Screenshot](snippets/snippet5.png)
 
-3. Display uploaded image in frame
+4. Display uploaded image in frame
 
 ![Screenshot](snippets/snippet2.png)
 
-4. Display face detected of uploaded image
+5. Display face detected of uploaded image
 
 ![Screenshot](snippets/snippet3.png)
 
-5. Display face detected using webcam
+6. Display face detected using webcam
 
 ![Screenshot](snippets/snippet4.png)
 
