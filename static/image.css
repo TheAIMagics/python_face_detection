@@ -1,4 +1,5 @@
 .navbar-light .navbar-brand{color: rgba(0,0,0,.9);}
+.navbar-light .navbar-brand {margin-left: auto;margin-right: auto;}.navbar-light .navbar-brand{color: rgba(0,0,0,.9);}
 .navbar-light .navbar-brand {margin-left: auto;margin-right: auto;}
 * {margin: 0; padding: 0; box-sizing: border-box;}
 body {background: #f6f6f6; color: #444; font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1;}

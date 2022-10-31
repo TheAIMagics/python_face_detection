@@ -33,19 +33,17 @@ def allowed_file(filename):
 
 @app.route('/image', methods=['GET', 'POST'])
 def upload_file():
-    print(request.files)
-    print(request.method)
     if request.method == 'POST':
         # check if the post request has the file part
         if 'file' not in request.files:
-            flash('No file part')
+            flash('No file present')
             return redirect(request.url)
         file = request.files['file']
         # If the user does not select a file, the browser submits an
         # empty file without a filename.
         if file.filename == '':
             flash('No selected file')
-            print('No selected file')
+            print('No file selected')
             return redirect(request.url)
         if file and allowed_file(file.filename):
             print(file.filename)
@@ -56,9 +54,7 @@ def upload_file():
 
 @app.route('/uploads/<name>')
 def download_file(name):
-    print('download url')
     img_path = os.path.join(UPLOAD_FOLDER, name)
-    print(img_path)
     face_detect_obj = FaceDetectionImage(image_path=img_path)
     face_detect_obj.display_image()
     return send_from_directory(app.config["UPLOAD_FOLDER"], name)
@@ -72,8 +68,6 @@ def webcam():
         
     except Exception as e:
         raise FaceDetectionException(e,sys)
-
-
 
 if __name__=="__main__":
     app.run(debug=True)

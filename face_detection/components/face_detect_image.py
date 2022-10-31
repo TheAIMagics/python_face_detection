@@ -16,7 +16,6 @@ class FaceDetectionImage:
             # Black and White image (2 channels)
             img = cv2.imread(self.image_path)
 
-            print(img.shape)
             # Will print shape of numpy array ie(426,500)
             resized_img = cv2.resize(img, (int(img.shape[1]*2),int(img.shape[0]*2)))
 
@@ -26,7 +25,6 @@ class FaceDetectionImage:
             # Search the coordinates of the image
             faces = face_cascade.detectMultiScale(gray_img , scaleFactor = 1.05, minNeighbors =5)
 
-            print(faces)
 
             for x,y,w,h in faces:
                 img = cv2.rectangle(img, (x,y), (x+w, y+h), (0,255,0), 3)
